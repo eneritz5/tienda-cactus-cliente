@@ -1,0 +1,15 @@
+<div class="containerCesta">
+<div class="containerCactusCesta">
+    <div class="cactusCesta" *ngFor="let oneCactus of cesta">
+        <img src="{{oneCactus.producto.img}}" alt="cactus">
+        <h1>{{oneCactus.producto.nombre.toUpperCase()}}</h1>
+        <p>{{oneCactus.producto.precio}}&euro;</p>
+
+        <button class="botonQuitarCesta" (click)="refresh()" (click)="quitarDeLaCesta(oneCactus.producto._id)">X</button>
+    </div>
+</div>
+    <div class="totalPrecio">
+        <p>Total a pagar: {{precioTotal.toFixed(2)}}&euro;</p>
+    </div>
+        <button class="botonPagarCesta" (click)="refresh()" (click)="pagar()">PAGAR</button>
+</div>

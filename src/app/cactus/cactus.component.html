@@ -1,0 +1,13 @@
+{{ uppercase_expression | uppercase}}
+
+
+<div class="cadaCactusMostrar">
+    <div class="cadaCactusInfoMostrar">
+        <h4>{{producto.nombre | uppercase}}</h4>
+        <p>{{producto.descripcion}}</p>
+        <p>{{producto.precio}}&euro;</p>
+        <button (click)="anyadirCesta()" (click)="anyadirProducto(producto)" >COMPRAR</button>
+        <div id="snackbar-two">¡Añadido a tu cesta!</div>
+    </div>
+    <img src="{{producto.img}}" alt="cactus">
+</div>

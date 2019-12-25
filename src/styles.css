@@ -1,1 +1,646 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: #1b1b19;
+  }
+
+  .logo{
+    width:80px;
+  }
+  
+  @keyframes blur{
+    0%{
+      filter:blur(15px)
+    }
+    100%{
+      filter: blur(0px)
+    }
+  }
+
+
+  @keyframes move-image{
+    0%{
+      transform: translate(-97px, 0px);
+    }
+    100%{
+      transform: translate(-292px, 0px);
+    }
+  }
+
+  @keyframes move-tittles{
+    0%{
+      transform:translate(220px, 0px);
+      opacity: 0;
+    }
+    100%{
+      transform: translate(-292px, 0px);
+      opacity:1;
+    }
+  }
+
+  .contenedorImagen{
+    width: 100%;
+    overflow: hidden;
+    z-index: -10;
+    /*animation: opacidad 2s forwards;
+    animation: opacidad 3s normal forwards ;*/
+  }
+  
+  .imagenYTexto{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu{
+    display:flex;
+    list-style: none;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    color: #6F6D5E;
+    font-size: 12pt;
+    font-family: 'Archivo Black', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .inicio {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ::-webkit-input-placeholder { /* Edge */
+    color: #c0c0c0;
+  }
+  
+  .login h1{
+    color: #6F6D5E;
+    font-family:'Libre Caslon Text', serif;
+    font-size: 16pt;
+  }
+  
+  .login input{
+    padding: 10px;
+      font-size: 16px;
+      background-color: #6F6D5E;
+      color: white;
+      border-style: none;
+      margin:10px;
+      padding-right: 200px;
+      font-family:'Libre Caslon Text', serif;
+  }
+  
+  .login button{
+    background-color: #6F6D5E;
+    color: white;
+    border-style: none;
+    font-size: 16px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-family: 'Archivo Black', sans-serif;
+    border-radius: 4px;
+  }
+  
+  .login button:hover{
+    background-color: #3f6e13;
+  }
+  .nombrecactus{
+    justify-content: right;
+    color: #6F6D5E;
+    font-size: 80pt;
+    font-family: 'Archivo Black', sans-serif;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nombrecactus h3{
+    /*margin: 0px 160px 50px 0px;*/
+    margin: 0px -160px 20px 0px
+  }
+  
+  .primerH1{
+    /*animation: blur 1s normal forwards ;*/
+    animation: move-tittles 1s normal forwards ;
+    
+  }
+  
+  .segundoH1{
+    /* animation: blur 2s normal forwards ; */
+    animation: move-tittles 2s normal forwards ;
+  }
+  .tercerH1{
+    /* animation: blur 3s normal forwards ; */
+    animation: move-tittles 3s normal forwards ;
+  }
+  .cuartoH1{
+    /* animation: blur 4s normal forwards ; */
+    animation: move-tittles 4s normal forwards ;
+  
+  }
+  .quintoH1{
+    /* animation: blur 5s normal forwards ; */
+    animation: move-tittles 5s normal forwards ;
+  
+  }
+  .sextoH1{
+    /* animation: blur 6s normal forwards ; */
+    animation: move-tittles 6s normal forwards ;
+  }
+  .septimoH1{
+    /* animation: blur 7s normal forwards ; */
+    animation: move-tittles 7s normal forwards ;
+  }
+  .octavoH1{
+    /* animation: blur 8s normal forwards ; */
+    animation: move-tittles 8s normal forwards ;
+  
+  }
+  
+  
+  @keyframes opacidad{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  
+  .cactusTienda{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 90px;
+    padding-top: 200px
+  }
+  .cactusTienda div{
+    margin: 0px 50px 50px 50px;
+  
+  }
+  .cactusTienda img{
+    filter: grayscale(100%);
+    border-radius: 26px;
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    transition: all 0.6s;
+  }
+  
+  .cactusTienda img:hover{
+    filter: grayscale(0);
+    border-radius: 4px;
+  }
+  
+  
+  
+  .cactusTienda h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size:12pt;
+    color: #6F6D5E;
+   
+  }
+  
+  .cactusTienda p{
+    font-family:'Libre Caslon Text', serif;
+    font-size:12pt;
+    color: #6F6D5E;
+  }
+  .cactusTienda button{
+    font-family: 'Archivo Black', sans-serif;
+    font-size:12pt;
+    color: #ffffff;
+    background-color: #6F6D5E;
+    border-style: none;
+    padding:6px;
+    border-radius: 3px;
+  }
+  
+  .cactusTienda button:hover{
+    background-color: #3f6e13;
+  }
+  .cactusCesta{
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cactusCesta p{
+    font-family:'Libre Caslon Text', serif;
+    font-size:14pt;
+    color: #6F6D5E;
+  }
+  
+  .cactusCesta div{
+    margin: 0px 50px 50px 50px;
+  }
+  .cactusCesta img{
+    height: 245px;
+    border-radius: 4px;
+    width: 245px;
+    object-fit: cover;
+  }
+  
+  .cactusCesta h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size:12pt;
+    color: #6F6D5E;
+  }
+  .botonQuitarCesta{
+    background-color: #6F6D5E;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:10pt;
+    color: white;
+    border-style: none;
+    padding: 8px;
+    border-radius: 100px;
+    width: 50px;
+  }
+  
+  .enlace {
+    cursor: pointer;
+  }
+  
+  .botonQuitarCesta:hover{
+    background-color: #2b490f;
+  }
+  .botonPagarCesta{
+    font-size: 20pt;
+    margin-bottom: 50px;
+    background-color: #6F6D5E;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:16pt;
+    color: white;
+    border-style: none;
+    padding: 10px;
+    border-radius: 4px;
+  
+  }
+  .botonPagarCesta:hover{
+  
+    background-color: #2b490f;
+  }
+  
+  .containerCesta{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .containerCactusCesta{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+  
+  .totalPrecio{
+    font-family:'Libre Caslon Text', serif;
+    font-size: 16pt;
+  }
+  
+  p{
+    color: #6F6D5E;
+  }
+  
+  .footer{
+  list-style: none;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  background-color: #6F6D5E;
+  color:white;
+  font-family: 'Archivo Black', sans-serif;
+  font-size:14pt;
+  padding: 30px 0px 30px 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  }
+  
+  .footer li{
+    color:white;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  body{
+    position: relative;
+    margin:0px;
+  }
+  
+  .main{
+    margin-bottom: 85px;
+  }
+  
+  .imagenYTexto p{
+    width: 570px;
+    font-size: 16px;
+    font-family: 'Libre Caslon Text', serif;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    align-self: flex-end;
+  
+  }
+  
+  .imagenFondoInicio{
+    z-index: -10;
+    height: 100vh;
+    /*transform: translate(-97px, 0px);*/
+    animation: move-image 4s forwards;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .footer a:-webkit-any-link {
+    color: #282c34;
+  }
+  .menu a:-webkit-any-link {
+    color: #6F6D5E;
+  }
+  
+  .contenidoContacto{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 12pt;
+    margin-left:50px;
+  }
+  
+  .contenidoContacto p{
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+  .contenidoContacto h1{
+    color: #6F6D5E;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  .containerContenidoContacto{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 200px;
+  }
+  
+  .containerContenidoContacto img{
+    width: 400px;
+    padding-top: 200px;
+    margin-left:0;
+  }
+  
+  .contenidoAbout{
+    font-size: 12pt;
+    font-family: 'Libre Caslon Text', serif;
+    width: 400px;
+    margin-right: 50px;
+    align-self: flex-end;
+  }
+  
+  .contenidoAbout h1{
+    color: #6F6D5E;
+    font-family: 'Archivo Black', sans-serif;
+  
+  }
+  
+  .containerContenidoAbout{
+    display: flex;
+    flex-direction: row;
+    padding-top: 200px;
+    justify-content: center;
+    padding-bottom: 200px;
+    
+  }
+  
+  .containerContenidoAbout img{
+    width: 500px;
+  }
+  
+  .app-root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #3f6e13;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 35px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.25s, fadeout 0.5s 1.75s;
+    animation: fadein 0.25s, fadeout 0.5s 1.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 35px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 35px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 35px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 35px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  .hastaPronto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+  }
+
+  .hastaPronto img{
+    width: 100vw;
+  }
+
+  .hastaPronto h4{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25pt;
+    color: #6F6D5E;
+    margin-bottom: 10px
+    
+  }
+
+  .hastaPronto p{
+    font-size: 16pt;
+    font-family: 'Libre Caslon Text', serif;
+    margin-bottom: 50px;
+  }
+
+  .cadaCactusInfoMostrar{
+  display:flex;
+  flex-direction: column;
+ width: 400px;
+ justify-content: flex-start;
+  }
+
+  .cadaCactusInfoMostrar p{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 12pt;
+  }
+
+  .cadaCactusInfoMostrar h4{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 12pt;
+    color: #6F6D5E;
+    margin-top: 0;
+  }
+  .cadaCactusMostrar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .cadaCactusMostrar img{
+    padding-right: 30px;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .cadaCactusInfoMostrar button{
+ 
+      font-family: 'Archivo Black', sans-serif;
+      font-size:12pt;
+      color: #ffffff;
+      background-color: #6F6D5E;
+      border-style: none;
+      padding:6px;
+      border-radius: 3px;
+      width: 100px;
+    }
+    
+    .cadaCactusInfoMostrar button:hover{
+      background-color: #3f6e13;
+    }
+ 
+    #snackbar-two {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #3f6e13;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 100px;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 17px;
+    }
+    
+    #snackbar-two.show {
+      visibility: visible;
+      -webkit-animation: fadein-two 0.25s, fadeout-two 0.5s 1.75s;
+      animation: fadein-two 0.25s, fadeout-two 0.5s 1.5s;
+    }
+    
+    @-webkit-keyframes fadein-two {
+      from {bottom: 0; opacity: 0;} 
+      to {bottom: 100px; opacity: 1;}
+    }
+    
+    @keyframes fadein-two {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 100px; opacity: 1;}
+    }
+    
+    @-webkit-keyframes fadeout-two {
+      from {bottom: 100px; opacity: 1;} 
+      to {bottom: 0; opacity: 0;}
+    }
+    
+    @keyframes fadeout-two {
+      from {bottom: 100px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
+
+    .hastaProntoTexto{
+      display:flex;
+      flex-direction: column;
+    }
+.hastaProntoTexto h4{
+  font-size: 16pt;
+}
+    .hastaPronto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hastaPronto img{
+      width: 40vw;
+    }

@@ -1,0 +1,9 @@
+<div  class="cactusTienda" >
+<div *ngFor= "let cactus of datos">
+    <img src={{cactus.img}} (click)="irACactus(cactus._id)">
+    <h1>{{cactus.nombre.toUpperCase()}}</h1>
+    <p>{{cactus.precio}}&euro;</p>
+    <button (click) = "anyadirProducto(cactus)" (click) = "anyadirCesta()" >COMPRAR</button>
+    <div id="snackbar">¡Añadido a tu cesta!</div>
+</div>
+</div>
